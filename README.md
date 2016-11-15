@@ -1,2 +1,2 @@
 # hacker_rank
-solved problem in hacker rank and others
+problems solved in hacker rank and others

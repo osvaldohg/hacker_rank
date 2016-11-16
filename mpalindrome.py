@@ -10,7 +10,7 @@ def mpalindrome(number):
 
     while not palindrome(number):
         reverse=""
-        #reverse=numer[::-1]
+        #reverse=number[::-1]
         for digit in range((len(number)-1),-1,-1):
             reverse+=number[digit]
                 

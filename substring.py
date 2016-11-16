@@ -1,16 +1,38 @@
 #stringtype:
-
-
-def typeofstring(a,b):
-    if set(a).issubset(set(b)):
-        return "subset"
+       
+def types(a,b):
+    if len(a) == len(b):
+        if a == b:
+            return "equal"
     
-    if set(a).issuperset(set(b)):
-        return "superset"
+    if len(a) < len(b):
+        return checker(a,b,"sublist")        
+    else:
+        return checker(b,a,"superlist")
+        
+def checker(small,big,message):
+    i=0
+    j=0
+    match=False
+    while j < len(big):
+        if i < len(small):
+            if big[j]==small[i]:
+                i+=1
+                match=True
+            else:
+                i=0
+                match=False
+        else:
+            return message
+        j+=1
+        
+    if match:
+        return message
+    else:
+        return "neither"    
+        
         
 #main
-
-print typeofstring("aaa","aba")
 
 
 #subset all a in b
@@ -42,9 +64,16 @@ L=[1,2,3,4]
 #sublist
 
 M=[1,2,3]
-N=[1,2,0,1,2,3]
+N=[1,2,0,1,2,4,3]
 #sublist
 
+print types(A,B)
+print types(C,D)
+print types(E,F)
+print types(G,H)
+print types(I,J)
+print types(K,L)
+print types(M,N)
 
     
 

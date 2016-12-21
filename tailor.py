@@ -7,11 +7,10 @@ n,p = raw_input().strip().split(' ')
 n,p = [int(n),int(p)]
 a = map(int,raw_input().strip().split(' '))
 # your code goes here
-b=sorted(a)
 res=[]
 last=0
 stotal=0
-for n in b:
+for n in sorted(a):
     z= n/p
     x=z*p
     while x < n:

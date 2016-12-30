@@ -11,8 +11,9 @@ max=0
 for a0 in xrange(q):
     angle = int(raw_input().strip())
     angles.append(angle%360)
-    if angle>=max:
-        max=angle
+    
+    if angle%360>=max:
+        max=angle%360
     # your code goes here
 
 #print angles

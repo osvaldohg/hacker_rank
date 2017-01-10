@@ -29,7 +29,8 @@ def getchars(count,lchars,hcount):
         res=(lchars-len(subchars))/2
         subchars="-"*res+subchars+"-"*res
     return subchars
-        
+
+#main
 for i in xrange(letters):
     hcount=abs(i-n+1)
     print getchars(count,lchars,hcount)

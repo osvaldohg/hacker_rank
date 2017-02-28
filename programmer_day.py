@@ -28,6 +28,6 @@ def gregorian(y):
 if year >= 1700 and year <= 1917:
     print julian(year)
 elif year == 1918:
-    print "26.08.1918"
+    print "26.09.1918"
 elif year > 1918 and year <= 2700:
     print gregorian(year)

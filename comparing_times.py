@@ -5,21 +5,18 @@ import sys
 
 def timeCompare(t1, t2):
     # Complete this function
-    #print t1,t2
+    
     hour1=t1[:2]
     minute1=t1[3:5]
     am1=t1[5:]
-    #print hour1,minute1,am1
-    
+        
     hour2=t2[:2]
     minute2=t2[3:5]
     am2=t2[5:]
-    #print hour1,minute1,am1
-    
+        
     if am1 < am2:
         return "First"
     elif am1 == am2:
-        #if am1 == "AM" and am2=="AM":
         if hour1=="12":
             hour1="00"
         if hour2=="12":

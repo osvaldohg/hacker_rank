@@ -1,4 +1,6 @@
 #!/bin/python
+#https://www.hackerrank.com/contests/world-codesprint-11/challenges/simple-file-commands
+#by oz
 
 import sys
 
@@ -12,9 +14,10 @@ dict={}
 
 def cmd_crt(c,quiet):
     #
+    pointer=0
     if c[1] in dict:
         #dict[c[1]].append(1)
-        pointer=0
+        #pointer=0
         
         try :
             pointer=dict[c[1]].index(0)
@@ -35,6 +38,7 @@ def cmd_crt(c,quiet):
         if not quiet:
             print "+",c[1]
     
+    return pointer
     #print dict
 def cmd_dl(c,quiet):
     #
@@ -50,24 +54,36 @@ def cmd_dl(c,quiet):
     if not quiet:
         print "-",c[1]   
         
-    return id    
+        
     
 def cmd_rnm(c):
     #
     id=0
-    shortname=c[1][:len(c[1])-3]
-    shortname2=c[2][:len(c[2])-3]
+    param1=""
+    param2=""
+    
+    if "(" in c[1]:
+        param1=c[1][:len(c[1])-3]
+    else:
+        param1=c[1]
+    
+    if "(" in c[2]:
+        param2=c[2][:len(c[2])-3]
+    else:
+        param2=c[2]
+        
+    
     cmd=["crt",c[2]]
-    cmd_crt(cmd,True)
+    val=cmd_crt(cmd,True)
     
     cmd2=["del",c[1]]
-    val=cmd_dl(cmd2,True)
+    cmd_dl(cmd2,True)
     
     name=""
     if val!=0:
-        name=shortname2+"("+str(val)+")"
+        name=param2+"("+str(val)+")"
     else:
-        name=shortname2
+        name=param2
         
     print "r",c[1],"-> "+name
 

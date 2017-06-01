@@ -1,5 +1,6 @@
 #!/bin/python
 #by oz
+
 def max_sub(word):
     if len(word)<2:
         return word
@@ -18,13 +19,22 @@ def max_sub(word):
             init_current=end_current
  
         end_current+=1
-        
-    print init_max, end_max
+    
+    if end_max==1:
+        return word
+    
     return word[init_max:end_max]
 
 print max_sub("booking.com")
 print max_sub("github.osvaldohg")
 print max_sub("gmail.co")
+print max_sub("g")
+
+#results:
+#oking.c
+#github.osvald
+#gmail.co
+#g
     
    
     

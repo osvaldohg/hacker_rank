@@ -1,25 +1,30 @@
 #!/bin/python
-
+#by oz
 def max_sub(word):
-    count=0
-    max=0
-    index=0
+    if len(word)<2:
+        return word
+        
+    init_max=0
+    end_max=1
+    init_current=0
+    end_current=1
     
-    sub=[]
-    for i in range(0,len(word)):
-        if word[i] in sub:
-            if count > max:
-                max=count
-            count=0
-            sub=[]
-        else:
-            count+=1
-            sub.append(word[i])
+    while end_current < len(word):
+        if word[end_current] in word[init_current:end_current]:
+            if end_current-init_current > end_max-init_max:
+                init_max=init_current
+                end_max=end_current
+
+            init_current=end_current
+ 
+        end_current+=1
         
-    return str(max)    
-        
-        
+    print init_max, end_max
+    return word[init_max:end_max]
+
 print max_sub("booking.com")
+print max_sub("github.osvaldohg")
+print max_sub("gmail.co")
     
    
     

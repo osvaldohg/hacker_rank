@@ -2,16 +2,12 @@
 #by oz
 
 def check_next(first,letter):
-    #if len(first)==1:
-    #    print "lol"
-    #    return 0
     try:
         id=first.index(letter)
         return id 
     except ValueError:
         return -1
     
-
 
 def sort_names(names):
     print "sorting"
@@ -32,14 +28,6 @@ def sort_names(names):
             names.pop(i)
             break
 
-    tmp=[]
-    print sortednames
-    print first
-    print last
-    print names
-
-    #for i in range(0,len(names)):
-    i=0
     na=0
     while na<7:
         if len(first)==1:
@@ -53,21 +41,17 @@ def sort_names(names):
         print first
         print last
         print names
-        print "this is i ",i
         
         for i in range(0,len(first)):
             if lastletter == first[i]:
                 tmp.append(names[i])
-                print tmp
 
         for j in range(0,len(tmp)):
             val=check_next(first,tmp[j][-1])
             if val!=-1:
-                print "holla ",tmp[j]
                 sortednames.append(tmp[j])
                 first.pop(first.index(tmp[j][0].lower()))
                 last.pop(first.index(tmp[j][-1]))
-                print "mmmm",names
                 names.pop(names.index(tmp[j]))
 
         na+=1
@@ -75,6 +59,7 @@ def sort_names(names):
     return sortednames 
 
 
-n=["Raymond","Nora","Daniel","Louie","Peter","Esteban"]
+#n=["Raymond","Nora","Daniel","Louie","Peter","Esteban"]
+n=["Raymond","Nora","Daniel","Armar","Ram","Louie","Peter","Esteban"]
 
 print sort_names(n)

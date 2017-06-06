@@ -52,24 +52,20 @@ class LinkedList(object):
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
         if position==1:
-            tmp=self.head
+            new_element.next=self.head
             self.head=new_element
-            head.next=tmp.next
+            
         else:
             current=self.head
-            count=0
-            while current.next:
-                count+=1
+            count=1
+            while current and count <position:
                 if (position-1)==count:
-                    tmp=current.next
+                    new_element.next=current.next
                     current.next=new_element
-                    new_element.next=tmp
-                current=current.next     
                     
-        
-        #pass
-    
-    
+                current=current.next     
+                count+=1    
+
     def delete(self, value):
         """Delete the first node with a given value."""
         count=1

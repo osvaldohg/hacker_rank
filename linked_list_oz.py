@@ -8,6 +8,8 @@ particular value.
 Then, use "Test Run" and "Submit" to run the test cases
 at the bottom."""
 
+#methods added by oz from udacity course
+
 class Element(object):
     def __init__(self, value):
         self.value = value
@@ -32,18 +34,16 @@ class LinkedList(object):
         Return "None" if position is not in the list."""
         count=1
         
-        if position==1:
-            return self.head
-        else:
-            current=self.head
-            while current.next:
-                
-                #print current.value, count
-                if count==position:
-                    return current
-                current=current.next 
-                count+=1
-            return current
+        if position <1:
+            return None
+        
+        current=self.head
+        while current and count <=position:
+            if count==position:
+                return current
+            current=current.next 
+            count+=1
+            
         return None
     
     def insert(self, new_element, position):

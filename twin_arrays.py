@@ -24,21 +24,18 @@ def twinArrays(ar1, ar2):
     min1=min(ar1)
     min2=min(ar2)
     pos1=ar1.index(min1)
-    pos2=ar1.index(min2)
+    pos2=ar2.index(min2)
     
     if pos1 != pos2:
-        return ar1[pos1]+ar2[pos2]
+        return min1+min2
     else:
-        if ar1[pos1] > ar2[pos2]:
-            a=second(ar1,pos1)
-            return a+ar2[pos2]
+        aa=min1+second(ar2,pos2)
+        bb=min2+second(ar1,pos1)
+        #print aa,bb
+        if aa>bb:
+            return bb
         else:
-            b=second(ar2,pos2)
-            return ar1[pos1]+b
-    
-    
-    
-    
+            return aa
     
 
 n = int(raw_input().strip())

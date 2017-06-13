@@ -14,10 +14,10 @@ def patternCount(s):
     for letter in s:
         if letter=="1" and pattern and zero:
             counter+=1
-            
+            zero=False
         elif letter=="1":
             pattern=True
-        
+            zero=False
         elif letter=="0":
             zero=True    
         elif letter!="0":

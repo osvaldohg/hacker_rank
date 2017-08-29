@@ -1,5 +1,8 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-#Alphabet Rangoli
+# Alphabet Rangoli
+# by oz
+# https://www.hackerrank.com/challenges/alphabet-rangoli/problem
+
 import string
 n=int(raw_input())
 abc=list(string.ascii_lowercase)

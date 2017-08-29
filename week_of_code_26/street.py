@@ -1,5 +1,8 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 #!/bin/python
+# https://www.hackerrank.com/contests/w26/challenges/street-parade-1/problem
+# by oz
+
 import sys
 minn=0
 maxx=0

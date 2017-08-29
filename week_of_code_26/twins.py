@@ -1,4 +1,6 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
+# https://www.hackerrank.com/contests/w26/challenges/twins/problem
+# by oz
 
 #!/bin/python
 

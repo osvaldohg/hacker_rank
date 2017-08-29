@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem
+# by oz
+
 def array_left_rotation(a, n, k):
     index=k%n
     chain=a[index:]+a[:index]    

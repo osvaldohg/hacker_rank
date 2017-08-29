@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/ctci-making-anagrams/problem
+# by oz 
+
 def number_needed(a, b):
     abc=[0 for x in xrange(26)]
     

@@ -1,6 +1,6 @@
-#print "hk"
-
 #!/bin/python
+# https://www.hackerrank.com/contests/w27/challenges/hackonacci-matrix-rotations/problem
+# by oz
 
 import sys
 

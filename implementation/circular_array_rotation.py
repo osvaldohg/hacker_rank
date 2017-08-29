@@ -1,5 +1,7 @@
 #!/bin/python
-#Circular Array Rotation 
+# Circular Array Rotation 
+# https://www.hackerrank.com/challenges/circular-array-rotation/problem
+# by oz
 
 import sys
 

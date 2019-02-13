@@ -1,4 +1,4 @@
-#!/bin/python
+#!/bin/python3
 # https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list
 # by oz
 
@@ -7,7 +7,6 @@ import os
 import random
 import re
 import sys
-from __future__ import print_function
 
 class SinglyLinkedListNode:
     def __init__(self, node_data):
@@ -50,31 +49,38 @@ def print_singly_linked_list(node, sep, fptr):
 #
 #
 def insertNodeAtPosition(head, data, position):
-    newNode=SinglyLinkedListNode
-    newNode.data=data
+    newNode=SinglyLinkedListNode(data)
 
-   while position>=0:
-       if position == 0:
-           
+    if position ==0:
+        temp=head
+        head=newNode
+        head.next=temp
     
-        
+    position-=1
+    count =0
+    current=head
+    while count!=position:
+        current=current.next        
+        count+=1
 
-            
+    newNode.next=current.next
+    current.next=newNode
 
+    return head
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    llist_count = int(raw_input())
+    llist_count = int(input())
 
     llist = SinglyLinkedList()
 
-    for _ in xrange(llist_count):
-        llist_item = int(raw_input())
+    for _ in range(llist_count):
+        llist_item = int(input())
         llist.insert_node(llist_item)
 
-    data = int(raw_input())
+    data = int(input())
 
-    position = int(raw_input())
+    position = int(input())
 
     llist_head = insertNodeAtPosition(llist.head, data, position)
 

@@ -28,3 +28,5 @@ def verifyBST(root,l = None, r = None):
         return False
     
     return verifyBST(root.left, l, root) and verifyBST(root.right, root, r)
+
+    #update code to pass all the test cases
